@@ -161,3 +161,10 @@
             </form>
         </div>
     </div>
+    <br><br><br>
+    <main class="py-4">
+            @yield('content')
+        </main>
+    </div><br><br><br>
+
+    @include('include/footer')
