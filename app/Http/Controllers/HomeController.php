@@ -47,7 +47,7 @@ class HomeController extends Controller
      */
     public function managerHome()
     {
-          echo "i am manager ";
-       // return view('managerHome');
+          
+        return view('backend.module.index');
     }
 }
