@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\category;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,5 +71,15 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
   
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+
     Route::resource('products', ProductController::class);
+
+
+    Route::get('/addcategory', function () { return view('backend.module.categorys.addcategorys'); })->name('addcategory');
+    Route::get('showcategory',[category::class, 'showcategory'])->name('showcategory');
+    Route::get('/deletecolorcategory/{id}', [category::class, 'deletecolorcategory']) -> name('deletecolorcategory');
+    Route::get('/deletelengthcategory/{id}', [category::class, 'deletelengthcategory']) -> name('deletelengthcategory');
+    Route::post('/addcolorcategory',[category::class, 'addcolorcategory'])->name('/addcolorcategory');
+     Route::post('/addlengthcategory',[category::class, 'addlengthcategory'])->name('/addlengthcategory');
+
 });

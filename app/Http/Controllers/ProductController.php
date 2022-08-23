@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
    
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\colorcategory;
+use App\Models\lengthcategory;
   
 class ProductController extends Controller
 {
@@ -27,7 +29,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('backend.module.products.create');
+
+        $colorcategories=colorcategory::all();
+        $lengthcategories=lengthcategory::all();
+        return view('backend.module.products.create' ,compact('colorcategories' ,'lengthcategories'));
     }
     
     /**

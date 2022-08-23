@@ -341,8 +341,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{URL::to('allcategorys')}}"><i class="fa fa-angle-double-right"></i> ALL CATEGORYS</a></li>
-                                <li><a href="{{URL::to('addcategorys')}}"><i class="fa fa-angle-double-right"></i> ADD CATEGORY</a></li>
+                                <li><a href="{{ route('showcategory') }}"><i class="fa fa-angle-double-right"></i> ALL CATEGORYS</a></li>
+                                <li><a href="{{ route('addcategory') }}"><i class="fa fa-angle-double-right"></i> ADD CATEGORY</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

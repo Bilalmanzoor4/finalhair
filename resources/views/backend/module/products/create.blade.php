@@ -61,18 +61,18 @@
         <br> 
       <label for="inputselect_color">Select Colors</label>
   <select id="select_color" name="color[]"  class="selectpicker" multiple data-live-search="true"  multiple="" >
-  <option value="Mustard">Mustard</option>
-  <option value="Ketchup">Ketchup</option>
-  <option value="Relish">Relish</option>
+      @foreach ($colorcategories as $category)
+  <option value="{{$category->value}}">{{$category->name}}</option>
+        @endforeach
    </select>
     </div>
      <div class="form-group col-md-6">
         <br> 
       <label for="inputselect_length">Select length</label>
   <select id="select_length" name="length[]"  class="selectpicker" multiple data-live-search="true"  multiple="">
-  <option value="Mustard">Mustard</option>
-  <option value="Ketchup">Ketchup</option>
-  <option value="Relish">Relish</option>
+    @foreach ($lengthcategories as $category)
+  <option value="{{$category->value}}">{{$category->name}}</option>
+        @endforeach
    </select>
     </div>
   </div>
