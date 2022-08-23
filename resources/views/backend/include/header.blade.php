@@ -6,6 +6,14 @@
         <meta charset="UTF-8">
         <title>Hair Concierge | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
         <!-- bootstrap 3.0.2 -->
         <link href="{{asset('assetsback/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
@@ -344,8 +352,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{URL::to('allproducts')}}"><i class="fa fa-angle-double-right"></i> ALL PRODUCT</a></li>
-                                <li><a href="{{URL::to('addproducts')}}"><i class="fa fa-angle-double-right"></i>ADD PRODUCT</a></li>
+                                <li><a href="{{ route('products.index') }}"><i class="fa fa-angle-double-right"></i> ALL PRODUCT</a></li>
+                                <li><a href="{{ route('products.create') }}"><i class="fa fa-angle-double-right"></i>ADD PRODUCT</a></li>
                             
                             </ul>
                         </li>

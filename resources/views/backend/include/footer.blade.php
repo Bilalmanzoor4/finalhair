@@ -1,6 +1,10 @@
   <!-- add new calendar event modal -->
 
 
+
+
+
+
         <!-- jQuery 2.0.2 -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->
@@ -31,7 +35,12 @@
         
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="{{asset('assetsback/js/AdminLTE/dashboard.js') }}" type="text/javascript"></script>        
-
+           
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
     </body>
 </html>
 
