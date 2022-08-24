@@ -14,7 +14,11 @@
         </div>
     @endif
 
+    <div class="pull-right">
+            <a class="btn btn-primary" href="{{ route('showcategory') }}"> Back</a>
+        </div>
 
+   
     <h2>Add Color Categories</h2>
 <form class="form-horizontal" method="POST" action="{{route('/addcolorcategory')}}" >
    @csrf

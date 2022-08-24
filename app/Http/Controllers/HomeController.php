@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\User;
+use App\Models\lengthcategory;
+use App\Models\colorcategory;
   
 class HomeController extends Controller
 {
@@ -47,7 +51,10 @@ class HomeController extends Controller
      */
     public function managerHome()
     {
-          
-        return view('backend.module.index');
+         $product_c= Product::count();
+         $user_c= User::count();   
+         $lengthcategory_c= lengthcategory::count();   
+         $colorcategory_c= colorcategory::count();            
+        return view('backend.module.index',compact('product_c','user_c','lengthcategory_c','colorcategory_c'));
     }
 }

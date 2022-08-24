@@ -317,7 +317,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="{{route('manager.home')}}">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -329,7 +329,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="{{URL::to('adduser')}}"><i class="fa fa-angle-double-right"></i>Add User</a></li>
-                                <li><a href="{{URL::to('alluser')}}"><i class="fa fa-angle-double-right"></i>All User</a></li>
+                                <li><a href="{{route('users.index')}}"><i class="fa fa-angle-double-right"></i>All User</a></li>
                         
                             </ul>
                         </li>

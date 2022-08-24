@@ -1,7 +1,8 @@
 @extends ('backend/layout/default')
   @section ('content')
- <div class="container" >
+
  <aside class="right-side" >
+     <div class="container-fluid"  style="width:70%;">
 
 
                   @if ($message = Session::get('success1'))
@@ -11,6 +12,10 @@
     @endif
 
                     <h2>Color Categories</h2>
+
+                    <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('addcategory') }}"> Create New Category</a>
+            </div>
                      <div class="table-responsive">
                                         <!-- .table - Uses sparkline charts-->
                                         <table class="table table-striped">
@@ -68,7 +73,7 @@
 
                                       </table>
                                   </div> 
-
-</aside>
 </div>
+</aside>
+
 @stop

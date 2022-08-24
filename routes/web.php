@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\category;
 
 /*
@@ -73,7 +74,7 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
 
     Route::resource('products', ProductController::class);
-
+    Route::resource('users', usercontroller::class);
 
     Route::get('/addcategory', function () { return view('backend.module.categorys.addcategorys'); })->name('addcategory');
     Route::get('showcategory',[category::class, 'showcategory'])->name('showcategory');
