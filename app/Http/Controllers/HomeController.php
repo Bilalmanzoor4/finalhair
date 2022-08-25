@@ -27,10 +27,8 @@ class HomeController extends Controller
      */
     public function index()
 
-    {
-        
-          echo "i am user ";
-        //return view('home');
+    {     
+        return view('index');
     } 
   
     /**

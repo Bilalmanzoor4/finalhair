@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\usercontroller;
+use App\Http\Controllers\userfront;
 use App\Http\Controllers\category;
 
 /*
@@ -20,6 +21,7 @@ use App\Http\Controllers\category;
 Route::get('/', function () {
     return view('index');
 })->name('index');
+
 
 Route::get('/about', function () {
     return view('about');
@@ -52,6 +54,7 @@ All Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
   
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [userfront::class, 'showprofile'])->name('profile');
 });
   
 /*------------------------------------------
