@@ -55,6 +55,8 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
   
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [userfront::class, 'showprofile'])->name('profile');
+    Route::get('/editprofile', [userfront::class, 'editprofile'])->name('editprofile');
+    Route::Post('/updateprofile', [userfront::class, 'updateprofile'])->name('updateprofile');
 });
   
 /*------------------------------------------

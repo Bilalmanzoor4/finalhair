@@ -56,8 +56,14 @@ body {
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-              
-                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{$user->name}}</span><span class="text-black-50">{{$user->email}}</span><span> </span></div>
+               @if($user->image)
+                <img class="rounded-circle mt-5" width="150px" height="150px" src="{{asset('upload/profile/'.$user->image)}}" >
+                @else
+
+                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                @endif
+                <br>
+                <span class="font-weight-bold">{{$user->name}}</span><span class="text-black-50">{{$user->email}}</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
@@ -81,7 +87,7 @@ body {
                       <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="{{$user->state}}"  readonly ></div>
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" value="{{$user->country}}"  readonly></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-dark" type="button">Update Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btn-dark" type="button" onclick="location='{{route('editprofile')}}'" >Settings</button></div>
             </div>
         </div>
         <div class="col-md-4">
